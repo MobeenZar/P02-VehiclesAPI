@@ -27,9 +27,7 @@ public class PricingServiceApplication {
     }
 
     /**
-     * Initializes the car manufacturers available to the Vehicle API.
-     * @param repository where the manufacturer information persists.
-     * @return the car manufacturers to add to the related repository
+     * Initializes the Prices for the vehicles.
      */
     @Bean
     CommandLineRunner initDatabase(PriceRepository repository) {
@@ -45,7 +43,6 @@ public class PricingServiceApplication {
 
     public static BigDecimal generateRandomPrice(BigDecimal min, BigDecimal max) {
         BigDecimal randomBigDecimal = min.add(new BigDecimal(Math.random()).multiply(max.subtract(min)));
-        System.out.println(randomBigDecimal.setScale(2,BigDecimal.ROUND_HALF_UP));
         return randomBigDecimal.setScale(2,BigDecimal.ROUND_HALF_UP);
     }
 }
