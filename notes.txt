@@ -1,0 +1,35 @@
+
+$ mvn clean package (run this in each directory containing the separate applications)
+Boogle Maps: $ java -jar target/boogle-maps-0.0.1-SNAPSHOT.jar
+
+The service is available by default on port 9191. You can check it on the command line by using $ curl http://localhost:9191/maps\?lat\=20.0\&lon\=30.0
+
+Pricing Service: $ java -jar target/pricing-service-0.0.1-SNAPSHOT.jar
+Vehicles API: $ java -jar target/vehicles-api-0.0.1-SNAPSHOT.jar
+When the Swagger API documentation is implemented, it should be available at: http://localhost:8080/swagger-ui.html
+
+
+http://localhost:8082/services/price?vehicleId=5
+
+{
+   "condition":"USED",
+   "details":{
+      "body":"sedan",
+      "model":"Impala",
+      "manufacturer":{
+         "code":101,
+         "name":"Chevrolet"
+      },
+      "numberOfDoors":4,
+      "fuelType":"Gasoline",
+      "engine":"3.6L V6",
+      "mileage":32280,
+      "modelYear":2018,
+      "productionYear":2018,
+      "externalColor":"white"
+   },
+   "location":{
+      "lat":40.73061,
+      "lon":-73.935242
+   }
+}

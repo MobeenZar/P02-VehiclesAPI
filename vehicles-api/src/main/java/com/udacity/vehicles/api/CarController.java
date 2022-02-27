@@ -114,6 +114,7 @@ class CarController {
         return ResponseEntity.ok(resource);
     }
 
+
     /**
      * Removes a vehicle from the system.
      * @param id The ID number of the vehicle to remove.
